@@ -1,37 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import home from '../img/home.png';
+import notes from '../img/notes.png';
+import fav from '../img/fav.png';
+import newNotes from '../img/new.png';
 
 const Navigation = () => {
   return (
     <Nav>
       <NavList>
         <li>
-          <Img
-            src="https://cdn-icons.flaticon.com/png/512/2544/premium/2544056.png?token=exp=1634551704~hmac=c366d5da524c42375e7efe102c9ba60c"
-            alt="home"
-          />
+          <Img src={home} alt="home" />
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Img
-            src="https://cdn-icons.flaticon.com/png/512/3131/premium/3131636.png?token=exp=1634551830~hmac=bee7302d685e05161ddd5c98edef803e"
-            alt="notes"
-          />
+          <Img src={notes} alt="notes" />
           <Link to="/signin?redirect=myNotes">My notes</Link>
         </li>
         <li>
-          <Img
-            src="https://cdn-icons-png.flaticon.com/512/263/263417.png"
-            alt="favorites"
-          />
+          <Img src={fav} alt="favorites" />
           <Link to="/signin?redirect=favorites">Favorites</Link>
         </li>
         <li>
-          <Img
-            src="https://cdn-icons.flaticon.com/png/512/5168/premium/5168290.png?token=exp=1634551958~hmac=09d0945d34b71f7e0a6354a5229fe76b"
-            alt="new"
-          />
+          <Img src={newNotes} alt="new" />
           <Link to="/signin?redirect=newNote">New</Link>
         </li>
       </NavList>
